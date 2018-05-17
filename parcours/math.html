@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Math (parcours js 7)</title>
+    </head>
+    <body>
+<script>
+
+var leMin = Math.min(7, 5, -12, 6, 32, 18, 14, -2);
+console.log(leMin);
+
+var leMax = Math.max(-3, 9, 21, 36, 27, 54, 17, 35);
+console.log(leMax);
+
+var minMax = leMin + leMax;
+console.log(minMax);
+
+
+// random
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var fiftyCent = getRandomInt(50, 100);
+console.log(fiftyCent);
+
+// random in an array
+
+var myHeroes = ["Goro", "Johnny Cago", "Kano", "Liu Kano", "Raiden", "Reptil", "Scorpion", "Shang Tsun", "Sonya", "Sub-Zero"]
+var myHero = myHeroes[Math.floor(Math.random() * myHeroes.length)];
+console.log(myHero);
+
+</script>
+    </body>
+</html>

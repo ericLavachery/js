@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+<script>
+
+// Exercice 5 - manipulation des opérateurs
+//
+// b est toujours initialisée à 2 Quel est le résultat des opérations suivantes ?
+//
+//     a=b++;
+//     a=++b;
+//     a=b--;
+//     a=--b;
+//     a+=b++;
+//     a=1; a+=++b;
+//     a=1; a-=b++;
+//     a=1; a-=++b;
+//     a=1; a+=b--;
+//     a=1; a+=--b;
+//
+// Pour chacune des opérations, afficher l'opération effectuée, la valeur de a après l'opération et la valeur de b après l'opération.
+
+var b = 2;
+console.log("a=b++");
+a=b++;
+console.log('valeur a = ' + a + ' | valeur b = ' + b);
+
+var b = 2;
+console.log("a=++b");
+a=++b;
+console.log('valeur a = ' + a + ' | valeur b = ' + b);
+
+var b = 2;
+console.log("a+=b++");
+a+=b++;
+console.log('valeur a = ' + a + ' | valeur b = ' + b);
+
+var b = 2;
+console.log("a=1; a-=++b;");
+a=1; a-=++b;
+console.log('valeur a = ' + a + ' | valeur b = ' + b);
+
+</script>
+    </body>
+</html>

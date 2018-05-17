@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+<script>
+
+// table multi
+var i = 1;
+while (i <= 10) {
+    console.log(i * 9);
+    i = i + 1;
+}
+
+// grade
+var grading = function(score){
+    if (score > 90) {
+        return "A";
+    } else if (score > 80) {
+        return "B";
+    } else if (score > 70) {
+        return "C";
+    } else if (score > 65) {
+        return "D";
+    } else {
+        return "F";
+    }
+}
+var i = 1;
+while (i <= 100) {
+    console.log("Pour " + i + " points, votre score est " + grading(i));
+    i = i + 1;
+}
+
+// pyramide
+var le = 1;
+while (le <= 5) {
+    var ne = 1;
+    while (ne <= le) {
+        document.write("* ");
+        ne = ne + 1;
+    }
+    document.write("<br>");
+    le = le + 1;
+}
+
+</script>
+    </body>
+</html>
