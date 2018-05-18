@@ -6,13 +6,23 @@
     </head>
     <body>
         <button onclick="jourDeLaSemaine()">Click me</button>
+        <p id="lejour"></p>
 <script>
 
 // Exercice 8 - utilisation de switch et de l'objet date
 //
 // Créer un bouton. Au click de ce bouton, lancer la fonction jourDeLaSemaine(). Cette fonction détermine le jour de la semaine et affiche selon le cas dimanche, lundi, mardi... etc. jusqu'à samedi.
 
+var jours = ['Gromanche', 'Lendi', 'Môrdi', 'Credi', 'Joudi', 'Dredi', 'Sadi'];
 
+var ajd = new Date();
+var grojour = jours[ajd.getDay()];
+
+console.log(grojour);
+
+var jourDeLaSemaine = function(){
+    document.getElementById("lejour").innerHTML = "Aujourd'hui c'est " + grojour;
+}
 
 </script>
     </body>

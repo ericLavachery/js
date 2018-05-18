@@ -7,6 +7,13 @@ var array = [
 
 // TANT QUE
 var i = 0;
+while (yourString.includes("p") === false) {
+
+    i = i + 1;
+    if (i >= 100) {break;}
+}
+
+var i = 0;
 while (i != array.length) {
     var sayHello = "Hello " + array[i];
     console.log(sayHello);

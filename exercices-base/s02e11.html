@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <button onclick="calculMoyenne()">Calcul de moyenne</button>
+        <p id="bravo"></p>
+<script>
+
+// Exercice 11 - utilisation des boucles et tests
+//
+// Créer un bouton. Au click de ce bouton, lancer la fonction calculMoyenne.
+//
+// Cette fonction va calculer la moyenne des nombres entrés au clavier :
+//
+//     demande à l'utilisateur d'entrer un nombre entier.
+//     si l'utilisateur entre autre chose qu'un nombre entier, un message d'alerte signale l'erreur et ensuite, la fonction redemande à l'utilisateur d'entrer un nombre entier.
+//     tant que le nombre entré est positif ou nul, la fonction mémorise ce nombre et l'additionne aux autres nombres précédemment entrés.
+//     si le nombre est négatif, alors la fonction calcule la moyenne de tous les nombres entrés en divisant la somme totale par le nombre de valeurs entrées.
+//     la fonction affiche le nombre de valeurs entrées
+//     la fonction affiche la moyenne
+
+// Number.isInteger(value)
+
+var calculMoyenne = function(){
+
+
+    var yourInteger = 0;
+    var i = 0;
+    while (yourInteger >= 0) {
+
+
+        var yourStuff = 'k';
+        var u = 0;
+        while (Number.isInteger(yourInteger) === false) {
+
+
+            yourStuff = prompt("Tapez un nombre entier");
+            yourInteger = Number(yourStuff);
+            if (Number.isInteger(yourInteger) === false) {
+                window.alert('"' + yourStuff + '" is not an integer');
+            }
+
+
+
+            u = u + 1;
+            if (u >= 100) { break; }
+        }
+
+        console.log(yourInteger);
+
+        i = i + 1;
+        if (i >= 100) { break; }
+    }
+
+}
+
+
+</script>
+    </body>
+</html>

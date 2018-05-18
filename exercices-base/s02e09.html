@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <button onclick="testWhile()">Click me</button>
+        <p id="lachaine"></p>
+<script>
+
+// Exercice 9 - utilisation de la boucle while
+//
+// Créer un bouton. Au click de ce bouton, lancer la fonction testWhile. Cette fonction demande à l'utilisateur de saisir une chaîne de caractères contenant la lettre p, et le redemande tant que l'utilisateur ne l'a pas fait. Il affiche ensuite la chaîne saisie entre guillemets.
+
+
+
+var testWhile = function(){
+    // var i = 0;
+    var yourString = "";
+    while (yourString.includes("p") === false) {
+        yourString = prompt("Please type a string containing the letter p", "");
+        if (yourString.includes("p")) {
+            document.getElementById("lachaine").innerHTML = yourString;
+        }
+        // i = i + 1;
+        // if (i >= 100) { break; }
+    }
+}
+
+</script>
+    </body>
+</html>

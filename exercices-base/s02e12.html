@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <button onclick="conversionTemperature()">Conversion de Températures</button>
+        <h2 id="menu"></h2>
+        <p id="quit"></p>
+        <p id="CF"></p>
+        <p id="CK"></p>
+        <p id="FC"></p>
+        <p id="FK"></p>
+        <p id="KC"></p>
+        <p id="KF"></p>
+        <h2 id="result"></h2>
+<script>
+
+// Exercice 12 - Conversion de température Celsius, Fahrenheit et Kelvin
+//
+// Créer un bouton. Au click de ce bouton, on lance la fonction conversionTemperature.
+//
+// L'utilisateur choisit d'abord dans le menu affiché quel type de conversion il souhaite, il indique son choix en indiquant le numéro correspondant dans le menu au moyen d'un prompt javascript
+//
+// Ensuite, un second prompt va lui demander la température à convertir et afficher le résultat dans une boîte d'alerte.
+//
+// Le menu :
+//
+//     Fin du programme
+//     De Celsius vers Fahrenheit
+//     De Celsius vers Kelvin
+//     De Fahrenheit vers Celsius
+//     De Fahrenheit vers Kelvin
+//     De Kelvin vers Celsius
+//     De Kelvin vers Fahrenheit
+//
+// Pour calculer la conversion, utilisez les formules suivantes :
+//
+// [°F] = ([°C] x 9/5) + 32
+// [K] = [°C] + 273,15
+// [°C] = ([°F] - 32) / (9/5)
+// [K] = (([°F] - 32) x (5/9)) + 273,15
+// [°C] = [K] - 273,15
+// [°F] = ([K] x 9/5) - 459,67
+
+var conversionTemperature = function(){
+    document.getElementById("menu").innerHTML = 'MENU';
+    document.getElementById("quit").innerHTML = '0 : Fin du programme';
+    document.getElementById("CF").innerHTML = '1 : De Celsius vers Fahrenheit';
+    document.getElementById("CK").innerHTML = '2 : De Celsius vers Kelvin';
+    document.getElementById("FC").innerHTML = '3 : De Fahrenheit vers Celsius';
+    document.getElementById("FK").innerHTML = '4 : De Fahrenheit vers Kelvin';
+    document.getElementById("KC").innerHTML = '5 : De Kelvin vers Celsius';
+    document.getElementById("KF").innerHTML = '6 : De Kelvin vers Fahrenheit';
+    document.getElementById("result").innerHTML = '';
+
+    menuChoice = prompt("Choisissez un nombre dans le menu");
+
+    switch (menuChoice) {
+        case "1":
+            document.getElementById("CF").innerHTML = '<strong>1 : De Celsius vers Fahrenheit</strong>';
+            convSys = "°F";
+            menuSys = "°C";
+            break;
+        case "2":
+            document.getElementById("CK").innerHTML = '<strong>2 : De Celsius vers Kelvin</strong>';
+            convSys = "°K";
+            menuSys = "°C";
+            break;
+        case "3":
+            document.getElementById("FC").innerHTML = '<strong>3 : De Fahrenheit vers Celsius</strong>';
+            convSys = "°C";
+            menuSys = "°F";
+            break;
+        case "4":
+            document.getElementById("FK").innerHTML = '<strong>4 : De Fahrenheit vers Kelvin</strong>';
+            convSys = "°K";
+            menuSys = "°F";
+            break;
+        case "5":
+            document.getElementById("KC").innerHTML = '<strong>5 : De Kelvin vers Celsius</strong>';
+            convSys = "°C";
+            menuSys = "°K";
+            break;
+        case "6":
+            document.getElementById("KF").innerHTML = '<strong>6 : De Kelvin vers Fahrenheit</strong>';
+            convSys = "°F";
+            menuSys = "°K";
+            break;
+        default:
+            return 0;
+    }
+
+    menuTemp = prompt("Indiquez la température à convertir");
+    menuTemp = Number(menuTemp);
+    convTemp = 0;
+    switch (menuChoice) {
+        case "1":
+            convTemp = (menuTemp * 9 / 5) + 32;
+            break;
+        case "2":
+            convTemp = menuTemp + 273.15;
+            break;
+        case "3":
+            convTemp = (menuTemp - 32) / (9/5);
+            break;
+        case "4":
+            convTemp = ((menuTemp - 32) * (5/9)) + 273.15;
+            break;
+        case "5":
+            convTemp = menuTemp - 273.15;
+            break;
+        case "6":
+            convTemp = (menuTemp * 9/5) - 459.67;
+            break;
+        default:
+            return 0;
+    }
+
+    document.getElementById("result").innerHTML = menuTemp + menuSys + ' font ' + convTemp + convSys;
+
+}
+
+
+
+
+</script>
+    </body>
+</html>
